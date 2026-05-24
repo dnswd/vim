@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ config, pkgs, ... }:
 {
   # Useful status updates for LSP.
   # https://nix-community.github.io/nixvim/plugins/fidget/index.html
@@ -45,7 +45,7 @@
   #  HTML inside Markdown or Lua inside Nix.
   #  https://nix-community.github.io/nixvim/plugins/otter/index.html
   plugins.otter = {
-    enable = true;
+    enable = config.plugins.treesitter.enable;
     autoActivate = true;
     autoLoad = true;
   };
