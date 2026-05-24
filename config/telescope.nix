@@ -1,4 +1,9 @@
 {
+  # Dependency
+  plugins.web-devicons = {
+    enable = true;
+  };
+
   # https://nix-community.github.io/nixvim/plugins/telescope/index.html
   plugins.telescope = {
     # The easiest way to use Telescope, is to start by doing something like:
