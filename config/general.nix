@@ -27,78 +27,46 @@ in
     register = "unnamedplus";
   };
 
+
+  # Basic plugins
+  plugins = {
+    # Detect tabstop and shiftwidth automatically
+    sleuth.enable = true;
+
+    # comment block region/lines
+    comment.enable = true;
+
+    # highlights todo, notes, etc
+    todo-comments = {
+      enable = true;
+      settings.signs = true;
+    };
+  };
+
   opts = {
-  # Line numbers
   number = true;
   relativenumber = true;
 
   # Mouse mode
   mouse = "a";
-  #
-  # # Don't show the mode, since it's already in the statusline
+
+  # Don't show the mode, since it's already in the statusline
   # showmode = false;
-  #
-  # # Long running undo file
-  # # Undodir configured above using extraConfgLuaPre to resolve home path
+
+  # Long running undo file
+  # Undodir configured above using extraConfgLuaPre to resolve home path
   # undofile = true;
-  #
-  # # Case-insensitive searching UNLESS \C or one or more capital letters in the search term
-  # ignorecase = true;
-  # smartcase = true;
-  #
-  # # Always show sign column
-  # signcolumn = "yes";
-  #
-  # # Decrease update time
-  # updatetime = 50;
-  #
-  # # Decrease mapped sequence wait time
-  # timeoutlen = 300;
-  #
-  # # How new splits should be configures
-  # splitright = true;
-  # splitbelow = true;
-  #
-  # # Show whitespace characters
-  # # list = true;
-  # # listchars.__raw = "{ tab = '»', trail = '·', nbsp = '␣' }";
-  #
-  # # Show substitutions live, show preview with "split" disable with "nosplit"
-  # inccommand = "split";
-  #
-  # # Highlight cursor line position
-  # cursorline = true;
-  #
-  # # Minimal number of screen lines to keep above and below the cursor.
-  # scrolloff = 8; # numbers of line to keep above/below cursor
-  # sidescrolloff = 8; # numbers of line to keep left/right of cursor
-  #
-  # # Disable search highlight but enable incremental search
-  # hlsearch = false;
-  # incsearch = true;
-  #
-  # # Tabs
-  tabstop = 2;
-  softtabstop = 2;
-  shiftwidth = 2;
-  # smarttab = true;
-  expandtab = true; # use spaces
-  #
-  # # Indentation
-  smartindent = true;
-  # breakindent = true; # auto indent when breaking
-  #
-  # Disable wrapping
+
   wrap = false;
-  #
+
   # # Disable folding
   # foldenable = false;
-  #
+
   # Disable backup
   swapfile = false;
   backup = false;
-  #
-  # # Colors
+
+  # Colors
   # termguicolors = true;
   };
 
