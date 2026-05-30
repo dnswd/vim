@@ -14,7 +14,6 @@
     }@inputs:
     let
       inherit (nixpkgs) lib;
-      forAllSystems = lib.genAttrs lib.systems.flakeExposed;
       forAllDevSystems = lib.genAttrs [
         "x86_64-linux"
         "aarch64-linux"
@@ -24,7 +23,7 @@
 
     in
     {
-      packages = forAllSystems (
+      packages = forAllDevSystems (
         system:
         let
           pkgs = nixpkgs.legacyPackages.${system};

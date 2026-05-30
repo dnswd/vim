@@ -34,7 +34,7 @@ in
     sleuth.enable = true;
 
     # comment block region/lines
-    comment.enable = true;
+    # comment.enable = true;
 
     # highlights todo, notes, etc
     todo-comments = {
