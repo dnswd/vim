@@ -4,7 +4,7 @@
     autoEnableSources = true;
     settings = {
       source = [
-        # { name = "ultisnips"; }
+        { name = "ultisnips"; }
         { name = "nvim_lsp"; }
         { name = "async_path"; }
         { name = "dap"; }
