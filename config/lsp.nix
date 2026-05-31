@@ -1,13 +1,6 @@
-{ config, pkgs, inputs, ... }:
+{ pkgs, ... }:
 
 {
-  # Dependencies
-  #
-  # https://nix-community.github.io/nixvim/plugins/cmp-nvim-lsp.html
-  plugins.cmp-nvim-lsp = {
-    enable = true;
-  };
-
   # Useful status updates for LSP.
   # https://nix-community.github.io/nixvim/plugins/fidget/index.html
   plugins.fidget = {

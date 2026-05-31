@@ -1,15 +1,25 @@
 { ... }: {
+  # plugin sources (https://github.com/nix-community/nixvim/blob/main/plugins/cmp/sources/default.nix)
+  plugins.cmp-nvim-ultisnips.enable = true; # ultisnips
+  plugins.cmp-vim-lsp.enable = true; # nvim_lsp
+  plugins.cmp-async-path.enable = true; # async_path
+  plugins.dap.enable = true; # dap
+  # plugins.cmp-nvim-lsp-document-symbol.enable = true; # nvim_lsp_document_symbol
+  # plugins.treesitter.enable = true; # treesitter
+  plugins.cmp-nvim-lsp-signature-help.enable = true; # nvim_lsp_signature_help
+  plugins.cmp-fuzzy-buffer.enable = true; # fuzzy_buffer
+  
   plugins.cmp = {
     enable = true;
-    autoEnableSources = true;
+    autoEnableSources = false;
     settings = {
-      source = [
-        { name = "ultisnips"; }
+      sources = [
         { name = "nvim_lsp"; }
+        { name = "ultisnips"; }
         { name = "async_path"; }
         { name = "dap"; }
-        { name = "nvim_lsp_document_symbol"; }
-        { name = "treesitter"; }
+        # { name = "nvim_lsp_document_symbol"; }
+        # { name = "treesitter"; }
         { name = "nvim_lsp_signature_help"; }
         { name = "fuzzy_buffer"; }
       ];
@@ -42,7 +52,7 @@
 	# Manually trigger a completion from nvim-cmp.
 	#  Generally you don't need this, because nvim-cmp will display
 	#  completions whenever it has completion options available.
-	"<C-q>" = "cmp.mapping.complete()";
+	"<C-Space>" = "cmp.mapping.complete()";
 	
 	# Think of <c-l> as moving to the right of your snippet expansion.
 	#  So if you have a snippet that's like:

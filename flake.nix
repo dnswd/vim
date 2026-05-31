@@ -1,7 +1,7 @@
 {
   description = "halcyonage/dnswd's neovim config";
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
     nixvim.url = "github:nix-community/nixvim";
     nixlib.url = "github:dnswd/nixlib";
   };
@@ -26,7 +26,10 @@
       packages = forAllDevSystems (
         system:
         let
-          pkgs = nixpkgs.legacyPackages.${system};
+          pkgs = import nixpkgs {
+            inherit system;
+            config.allowUnfree = true;
+          };
           lib = nixpkgs.lib.extend (
             final: prev: {
               # custom libs under lib.my
@@ -49,7 +52,10 @@
       devShells = forAllDevSystems (
         system:
         let
-          pkgs = nixpkgs.legacyPackages.${system};
+          pkgs = import nixpkgs {
+            inherit system;
+            config.allowUnfree = true;
+          };
           lib = nixpkgs.lib.extend (
             final: prev: {
               # custom libs under lib.my
