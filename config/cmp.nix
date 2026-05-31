@@ -1,7 +1,7 @@
 { ... }: {
   # plugin sources (https://github.com/nix-community/nixvim/blob/main/plugins/cmp/sources/default.nix)
   plugins.cmp-nvim-ultisnips.enable = true; # ultisnips
-  plugins.cmp-vim-lsp.enable = true; # nvim_lsp
+  plugins.cmp-nvim-lsp.enable = true; # nvim_lsp
   plugins.cmp-async-path.enable = true; # async_path
   plugins.dap.enable = true; # dap
   # plugins.cmp-nvim-lsp-document-symbol.enable = true; # nvim_lsp_document_symbol
@@ -30,6 +30,8 @@
           vim.fn["UltiSnips#Anon"](args.body)
         end
         '';
+
+      preselect = "cmp.PreselectMode.Item";
 
       mapping = {
 	# Select the [n]ext item
