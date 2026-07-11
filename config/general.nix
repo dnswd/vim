@@ -108,29 +108,22 @@ in
   #   };
   # };
 
-  # plugins = {
-  # Enable lazy loading
-  # lz-n.enable = true;
+  plugins = {
+    # Enable lazy loading
+    lz-n.enable = true;
 
-  # Enable error lens
-  # trouble.enable = true;
+    # Enable error lens (LSP errors window)
+    trouble.enable = true;
 
-  # Auto close bracket
-  # nvim-autopairs.enable = true;
+    # Lazygit integration
+    lazygit.enable = true;
 
-  # Lazygit integration
-  # lazygit.enable = true;
+    # Icons (required for Telescope, Bufferline, etc.)
+    web-devicons.enable = true;
 
-  # # Git signs
-  # gitsigns.enable = true;
-  # gitsigns.settings.current_line_blame = true;
-
-  # Icons
-  # web-devicons.enable = true;
-
-  # Guess ident
-  # guess-indent.enable = true;
-  # };
+    # Guess indent (auto-detect indentation)
+    guess-indent.enable = true;
+  };
 
   # dependencies = {
   #   ripgrep.enable = true;

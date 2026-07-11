@@ -71,6 +71,7 @@
           "path"
           "snippets"
           "lazydev"
+          "buffer"
         ];
         providers = {
           lazydev = {

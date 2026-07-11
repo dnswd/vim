@@ -6,8 +6,10 @@
   extraPackages = with pkgs; [
     # Used to format Lua code
     stylua
-    # Format nix
+    # Format nix using the official RFC-compliant formatter
     nixfmt
+    # Format Javascript / Typescript / CSS / HTML using Prettier
+    prettier
 
   ];
 

@@ -46,7 +46,10 @@
             }
           );
         in
-        halcyon-vim-package // { default = halcyon-vim-package; }
+        {
+          default = halcyon-vim-package;
+          halcyon-vim = halcyon-vim-package;
+        }
       );
 
       devShells = forAllDevSystems (

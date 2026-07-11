@@ -1,18 +1,19 @@
-{ ... }: {
+{ ... }:
+{
   plugins.origami = {
     enable = true;
     settings = {
       foldtext = {
-       lineCount = {
+        lineCount = {
           template = " %d";
-       };
+        };
       };
     };
 
     luaConfig.post = /* lua */ ''
       -- recommended
       vim.opt.foldlevel = 99
-		  vim.opt.foldlevelstart = 99
+      vim.opt.foldlevelstart = 99
 
       -- start util
       local fold_ranges = {} -- { [bufnr] = { { start_line = <1 based>, end_line = <1 based> }, }, }
@@ -157,6 +158,5 @@
       end
     '';
   };
-
 
 }
